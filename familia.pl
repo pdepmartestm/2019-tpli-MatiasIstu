@@ -24,8 +24,9 @@ progenitor(Abuelo,Padre),
 progenitor(Padre,Nieto).
 
 primos(Primo,Primo2):-
-  progenitor(Padre,Primo),
-  progenitor(Padre,Primo2),
+  progenitor(Padre1,Primo),
+  progenitor(Padre2,Primo2),
+  hermanos(Padre1,Padre2),
   Primo/=Primo2.
 
 pareja(Persona,Persona2):-
